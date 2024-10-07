@@ -12,7 +12,7 @@ function Form() {
 
   const handleSignup = async () => {
     if (email.includes("crce") && password === cpassword) {
-      const response = await fetch("https://lost-and-found-crce.vercel.app/api/signup", {
+      const response = await fetch("https://lost-found-crce.vercel.app/api/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +55,7 @@ function Form() {
   };
 
   const handleLogin = async () => {
-    const response = await fetch("https://lost-and-found-crce.vercel.app/api/login", {
+    const response = await fetch("https://lost-found-crce.vercel.app/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
