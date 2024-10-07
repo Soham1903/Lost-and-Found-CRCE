@@ -56,7 +56,7 @@ function Form() {
 
   const handleLogin = async () => {
     const response = await fetch("https://lost-found-crce.vercel.app/api/login", {
-      method: "GET",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
