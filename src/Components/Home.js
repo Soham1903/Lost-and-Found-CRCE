@@ -10,7 +10,7 @@ function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const fetchItems = async (query = "") => {
     const response = await fetch(
-      `https://lost-and-found-crce.vercel.app/api/items/?search=${query}`
+      `https://lost-found-crce.vercel.app/api/items/?search=${query}`
     );
     if (response.ok) {
       const data = await response.json();
