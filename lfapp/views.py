@@ -29,7 +29,7 @@ def signup(request):
     return JsonResponse({'message': 'User created successfully'}, status=201)
 
 @csrf_exempt
-@api_view(['GET'])
+@api_view(['POST'])
 def login(request):
     email = request.data.get('email')
     password = request.data.get('password')
