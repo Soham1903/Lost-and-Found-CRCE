@@ -1,13 +1,43 @@
 {
-    "builds": [{
-        "src": "lfproject/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
-    "routes": [
+  "builds": [
+    {
+      "src": "lfproject/wsgi.py",
+      "use": "@vercel/python",
+      "config": { 
+        "maxLambdaSize": "15mb", 
+        "runtime": "python3.9" 
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "lfproject/wsgi.py"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://lost-and-found-crce.vercel.app/api/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",  
+      "headers": [
         {
-            "src": "/(.*)",
-            "dest": "lfproject/wsgi.py"
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"  // Adjust this to specific origin for security
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "X-Requested-With, Content-Type, Authorization"
         }
-    ]
+      ]
+    }
+  ]
 }
