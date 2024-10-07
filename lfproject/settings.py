@@ -128,7 +128,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "https://lost-and-found-crce-ndeo6k8ex-soham1903s-projects.vercel.app",
+    "https://lost-and-found-crce-9is297rcy-soham1903s-projects.vercel.app/",
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 
