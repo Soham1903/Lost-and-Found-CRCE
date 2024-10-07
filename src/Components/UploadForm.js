@@ -20,7 +20,7 @@ function UploadForm() {
     formData.append("image", selectedImage); // selectedImage should be a File object
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/upload/", {
+      const response = await fetch("https://lost-and-found-crce.vercel.app/api/upload/", {
         method: "POST",
         body: formData,
       });
