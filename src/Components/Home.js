@@ -10,7 +10,7 @@ function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const fetchItems = async (query = "") => {
     const response = await fetch(
-      `http://127.0.0.1:8000/api/items/?search=${query}`
+      `https://lost-and-found-crce.vercel.app/api/items/?search=${query}`
     );
     if (response.ok) {
       const data = await response.json();
@@ -56,7 +56,7 @@ function Home() {
         {items.map((item, index) => (
           <Card
             key={index}
-            img={`http://127.0.0.1:8000/${item.image}`}
+            img={`https://lost-and-found-crce.vercel.app/${item.image}`}
             name={item.name}
             location={item.location}
             description={item.description}
