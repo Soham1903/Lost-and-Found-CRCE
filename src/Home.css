@@ -1,0 +1,65 @@
+.Navbar {
+  background-color: #ffffff;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.Navbar button {
+  padding: 10px;
+  background-color: #033452;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10%;
+}
+
+.Navbar h1 {
+  color: #043655;
+  /* margin-left: 10%; */
+}
+
+.Navbar img {
+  height: 90%;
+  margin-left: 5%;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.search-bar button {
+  margin-left: 10px;
+}
+
+.search-bar button::clicked {
+  margin-left: 10px;
+}
+
+.search-bar button:active {
+  background-color: black; /* Button moves to the right when clicked */
+}
+.items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow items to wrap */
+  margin-top: 120px; /* Add margin to avoid overlap with the Navbar */
+}
+
+.card {
+  flex: 1; /* Allow each card to grow equally */
+  max-width: 300px; /* Ensure cards don't grow too large */
+  margin: 10px; /* Space between cards */
+  /* Add other styles as needed */
+}
