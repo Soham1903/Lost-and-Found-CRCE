@@ -27,7 +27,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "*"  // Adjust this to specific origin for security
+          "value": "https://lost-found-crce.vercel.app"  // Replace with specific origin for security
         },
         {
           "key": "Access-Control-Allow-Methods",
