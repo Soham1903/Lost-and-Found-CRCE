@@ -9,6 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 from django.core.exceptions import ObjectDoesNotExist
 
+@csrf_exempt
 @api_view(['POST'])
 def signup(request):
     email = request.data.get('email')
@@ -27,6 +28,7 @@ def signup(request):
 
     return JsonResponse({'message': 'User created successfully'}, status=201)
 
+@csrf_exempt
 @api_view(['POST'])
 def login(request):
     email = request.data.get('email')
@@ -48,7 +50,7 @@ def login(request):
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
 
-
+@csrf_exempt
 @api_view(['POST'])
 def create_item(request):
     if request.method == 'POST':
@@ -75,6 +77,7 @@ def create_item(request):
 
     return JsonResponse({'error': 'Invalid request method'}, status=400)
 
+@csrf_exempt
 def item_list(request):
     if request.method == "GET":
         query = request.GET.get('search', '')  # Get search query
